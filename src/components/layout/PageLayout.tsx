@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 
-import LayoutSwitcher from '@/features/testing-ui/fiverr-gig-page/ui/LayoutSwitcher';
 
 type PageLayoutProps = {
   header: React.ReactNode;
@@ -11,7 +10,7 @@ type PageLayoutProps = {
 };
 
 const PageLayout: React.FC<PageLayoutProps> = ({ header, footer, children }) => {
-  const [currentLayout, setCurrentLayout] = useState('max-w-screen-xl'); // Default to boxed XL
+  const [currentLayout] = useState('max-w-screen-xl'); // Default to boxed XL
 
   const getLayoutClasses = () => {
     if (currentLayout === 'full-width') {
@@ -27,9 +26,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ header, footer, children }) => 
       <main className={getLayoutClasses()}>{children}</main>
       {footer}
 
-      {process.env.NODE_ENV !== 'production' && (
-        <LayoutSwitcher onLayoutChange={setCurrentLayout} currentLayout={currentLayout} />
-      )}
+
     </div>
   );
 };
