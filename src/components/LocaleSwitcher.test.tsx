@@ -1,7 +1,10 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { vi } from 'vitest';
-import { LocaleSwitcher } from './LocaleSwitcher';
+
+import { useRouter } from '@/libs/i18nNavigation';
 import { AppConfig } from '@/utils/AppConfig';
+
+import { LocaleSwitcher } from './LocaleSwitcher';
 
 vi.mock('next-intl', () => ({
   useLocale: () => 'en',
@@ -19,7 +22,7 @@ vi.mock('@/libs/i18nNavigation', () => ({
 describe('LocaleSwitcher', () => {
   it('renders all locales from AppConfig', () => {
     render(<LocaleSwitcher />);
-    AppConfig.locales.forEach(locale => {
+    AppConfig.locales.forEach((locale) => {
       expect(screen.getByText(locale.name)).toBeInTheDocument();
     });
   });
@@ -27,11 +30,12 @@ describe('LocaleSwitcher', () => {
   it('calls router.push and router.refresh on locale change', () => {
     const push = vi.fn();
     const refresh = vi.fn();
-    vi.mocked(require('@/libs/i18nNavigation')).useRouter.mockReturnValue({ push, refresh });
+    vi.mocked(useRouter).mockReturnValue({ push, refresh });
     render(<LocaleSwitcher />);
     // Simulate click to open dropdown and select a locale
     fireEvent.click(screen.getByRole('button', { name: /lang-switcher/i }));
     fireEvent.click(screen.getByText(AppConfig.locales[1].name));
+
     expect(push).toHaveBeenCalled();
     expect(refresh).toHaveBeenCalled();
   });

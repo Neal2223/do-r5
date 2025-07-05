@@ -16,10 +16,10 @@
       "static/css/app/[locale]/layout.css",
       "static/chunks/app/[locale]/layout.js"
     ],
-    "/[locale]/(auth)/(center)/sign-up/[[...sign-up]]/page": [
+    "/[locale]/(auth)/(center)/sign-in/[[...sign-in]]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/(auth)/(center)/sign-up/[[...sign-up]]/page.js"
+      "static/chunks/app/[locale]/(auth)/(center)/sign-in/[[...sign-in]]/page.js"
     ],
     "/[locale]/(auth)/(center)/layout": [
       "static/chunks/webpack.js",
@@ -31,10 +31,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/(auth)/layout.js"
     ],
-    "/[locale]/(auth)/(center)/sign-in/[[...sign-in]]/page": [
+    "/[locale]/(auth)/(center)/sign-up/[[...sign-up]]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/(auth)/(center)/sign-in/[[...sign-in]]/page.js"
+      "static/chunks/app/[locale]/(auth)/(center)/sign-up/[[...sign-up]]/page.js"
+    ],
+    "/[locale]/rpto/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/rpto/page.js"
+    ],
+    "/[locale]/rpto/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/rpto/[id]/page.js"
     ]
   }
 }
