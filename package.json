@@ -3,7 +3,7 @@
   "version": "1.7.6",
   "scripts": {
     "dev:spotlight": "spotlight-sidecar",
-    "dev:next": "next dev",
+    "dev:next": "node ./kill-port.mjs 3000 3001 3002 5432 6006 && next dev",
     "dev": "run-p dev:*",
     "build": "next build",
     "start": "next start",
