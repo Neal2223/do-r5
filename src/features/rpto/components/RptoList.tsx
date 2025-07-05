@@ -6,14 +6,23 @@ import { RptoCard } from './RptoCard';
 type RptoListProps = {
   rptos: Rpto[];
   className?: string;
+  noRptosFoundTitle: string;
+  noRptosFoundDescription: string;
 };
 
-export function RptoList({ rptos, className }: RptoListProps) {
+export function RptoList({
+  rptos,
+  className,
+  noRptosFoundTitle,
+  noRptosFoundDescription,
+}: RptoListProps) {
   if (rptos.length === 0) {
     return (
       <div className="flex h-48 flex-col items-center justify-center rounded-md border border-dashed bg-muted/50">
-        <h3 className="text-lg font-semibold">No RPTOs Found</h3>
-        <p className="text-sm text-muted-foreground">Try adjusting your search or filter criteria.</p>
+        <h3 className="text-lg font-semibold">{noRptosFoundTitle}</h3>
+        <p className="text-sm text-muted-foreground">
+          {noRptosFoundDescription}
+        </p>
       </div>
     );
   }

@@ -1,8 +1,26 @@
 import { render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
+import { NextIntlClientProvider } from 'next-intl';
 import { describe, expect, it, vi } from 'vitest';
-
 import { RptoFilter } from './RptoFilter';
+
+// Mock scrollIntoView as it's not implemented in JSDOM
+window.HTMLElement.prototype.scrollIntoView = vi.fn();
+
+const mockMessages = {
+  RPTO: {
+    filter_placeholder_search: 'Search by name...',
+    filter_all_cities: 'All Cities',
+  },
+};
+
+const renderWithProvider = (ui: React.ReactElement) => {
+  return render(
+    <NextIntlClientProvider locale="en" messages={mockMessages}>
+      {ui}
+    </NextIntlClientProvider>,
+  );
+};
 
 describe('RptoFilter', () => {
   const cities = ['Bhubaneswar', 'Cuttack'];
@@ -10,7 +28,7 @@ describe('RptoFilter', () => {
   it('should call onFilterChange when search input changes', async () => {
     const user = userEvent.setup();
     const handleFilterChange = vi.fn();
-    render(<RptoFilter cities={cities} onFilterChange={handleFilterChange} />);
+    renderWithProvider(<RptoFilter cities={cities} onFilterChange={handleFilterChange} />);
 
     const searchInput = screen.getByPlaceholderText('Search by name...');
     await user.type(searchInput, 'test search');
@@ -24,7 +42,7 @@ describe('RptoFilter', () => {
   it('should call onFilterChange when a city is selected', async () => {
     const user = userEvent.setup();
     const handleFilterChange = vi.fn();
-    render(<RptoFilter cities={cities} onFilterChange={handleFilterChange} />);
+    renderWithProvider(<RptoFilter cities={cities} onFilterChange={handleFilterChange} />);
 
     const selectTrigger = screen.getByRole('combobox');
     await user.click(selectTrigger);
@@ -41,12 +59,12 @@ describe('RptoFilter', () => {
   it('should render all provided cities as options', async () => {
     const user = userEvent.setup();
     const handleFilterChange = vi.fn();
-    render(<RptoFilter cities={cities} onFilterChange={handleFilterChange} />);
+    renderWithProvider(<RptoFilter cities={cities} onFilterChange={handleFilterChange} />);
 
     const selectTrigger = screen.getByRole('combobox');
     await user.click(selectTrigger);
 
-    expect(await screen.findByText('All Cities')).toBeInTheDocument();
+    expect(await screen.findByRole('option', { name: 'All Cities' })).toBeInTheDocument();
 
     for (const city of cities) {
       expect(await screen.findByText(city)).toBeInTheDocument();
