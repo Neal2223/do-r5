@@ -1,12 +1,9 @@
 import '@/styles/global.css';
-
+import Footer from '@/features/testing-ui/fiverr-gig-page/ui/Footer';
+import { AllLocales } from '@/utils/AppConfig';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-
-import { DemoBadge } from '@/components/DemoBadge';
-import Footer from '@/features/testing-ui/fiverr-gig-page/ui/Footer';
-import { AllLocales } from '@/utils/AppConfig';
 
 export const metadata: Metadata = {
   icons: [
@@ -62,7 +59,6 @@ export default function RootLayout(props: {
           {props.children}
 
           <Footer />
-          <DemoBadge />
         </NextIntlClientProvider>
       </body>
     </html>
