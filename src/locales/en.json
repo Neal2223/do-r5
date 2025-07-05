@@ -162,5 +162,27 @@
     "message_title": "Message",
     "message_description": "Enter a detailed message for your todo.",
     "submit_button": "Submit"
+  },
+  "RPTO": {
+    "directory_title": "RPTO Directory",
+    "directory_description": "Find certified Remote Pilot Training Organizations in Odisha.",
+    "no_rptos_found_title": "No RPTOs Found",
+    "no_rptos_found_description": "Try adjusting your search or filter criteria.",
+    "filter_placeholder_search": "Search by name...",
+    "filter_all_cities": "All Cities",
+    "card_logo_alt": "{name} logo",
+    "detail_visit_website": "Visit Website",
+    "detail_about": "About {name}",
+    "detail_courses_offered": "Courses Offered",
+    "course_duration": "Duration: {duration}",
+    "form_request_info_title": "Request Information",
+    "form_your_name_label": "Your Name",
+    "form_your_email_label": "Your Email",
+    "form_message_label": "Message",
+    "form_name_min_length": "Name must be at least 2 characters.",
+    "form_email_invalid": "Please enter a valid email address.",
+    "form_message_min_length": "Message must be at least 10 characters.",
+    "form_send_inquiry_button": "Send Inquiry",
+    "form_inquiry_subject": "Inquiry about {name}"
   }
 }
