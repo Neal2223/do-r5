@@ -2,6 +2,7 @@ import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import { rptos } from '@/data/rptos';
 import { CourseCard } from '@/features/rpto/components/CourseCard';
@@ -18,6 +19,7 @@ type RptoDetailPageProps = {
 
 export default function RptoDetailPage({ params }: RptoDetailPageProps) {
   const rpto = rptos.find(r => r.id === params.id);
+  const t = useTranslations('RPTO');
 
   if (!rpto) {
     notFound();
@@ -44,7 +46,7 @@ export default function RptoDetailPage({ params }: RptoDetailPageProps) {
             rel="noopener noreferrer"
             className="mt-2 inline-flex items-center text-sm text-primary hover:underline"
           >
-            Visit Website
+            {t('detail_visit_website')}
             {' '}
             <ExternalLink className="ml-1 size-4" />
           </Link>
@@ -55,14 +57,13 @@ export default function RptoDetailPage({ params }: RptoDetailPageProps) {
           <div className="space-y-6">
             <div>
               <h2 className="text-xl font-semibold">
-                About
-                {rpto.name}
+                {t('detail_about', { rptoName: rpto.name })}
               </h2>
               <p className="mt-2 text-muted-foreground">{rpto.description}</p>
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold">Courses Offered</h2>
+              <h2 className="text-xl font-semibold">{t('detail_courses_offered')}</h2>
               <div className="mt-4 space-y-4">
                 {rpto.courses.map(course => (
                   <CourseCard key={course.id} course={course} />
