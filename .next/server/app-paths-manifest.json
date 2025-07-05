@@ -1,6 +1,0 @@
-{
-  "/[locale]/(unauth)/page": "app/[locale]/(unauth)/page.js",
-  "/[locale]/rpto/[id]/page": "app/[locale]/rpto/[id]/page.js",
-  "/[locale]/rpto/page": "app/[locale]/rpto/page.js",
-  "/[locale]/(auth)/(center)/sign-up/[[...sign-up]]/page": "app/[locale]/(auth)/(center)/sign-up/[[...sign-up]]/page.js"
-}
