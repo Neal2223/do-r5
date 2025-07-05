@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
+import { NextIntlClientProvider } from 'next-intl';
 
 import { RequestInfoForm } from './RequestInfoForm';
 
@@ -25,8 +26,30 @@ describe('RequestInfoForm', () => {
     });
   });
 
+  const mockMessages = {
+    RPTO: {
+      form_label_name: 'Your Name',
+      form_label_email: 'Your Email',
+      form_label_message: 'Message',
+      form_button_send_inquiry: 'Send Inquiry',
+      form_validation_name_min_length: 'Name must be at least 2 characters.',
+      form_validation_email_invalid: 'Please enter a valid email address.',
+      form_validation_message_min_length: 'Message must be at least 10 characters.',
+      form_email_subject: 'Inquiry about {rptoName}',
+      form_email_body: 'Name: {name}\nEmail: {email}\n\nMessage:\n{message}',
+    },
+  };
+
+  const renderComponent = () => {
+    render(
+      <NextIntlClientProvider messages={mockMessages} locale="en">
+        <RequestInfoForm rptoEmail={rptoEmail} rptoName={rptoName} />
+      </NextIntlClientProvider>,
+    );
+  };
+
   it('should render input fields and a submit button', () => {
-    render(<RequestInfoForm rptoEmail={rptoEmail} rptoName={rptoName} />);
+    renderComponent();
 
     expect(screen.getByLabelText(/your name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/your email/i)).toBeInTheDocument();
@@ -36,7 +59,7 @@ describe('RequestInfoForm', () => {
 
   it('should show validation errors for empty fields on submit', async () => {
     const user = userEvent.setup();
-    render(<RequestInfoForm rptoEmail={rptoEmail} rptoName={rptoName} />);
+    renderComponent();
 
     const submitButton = screen.getByRole('button', { name: /send inquiry/i });
     await user.click(submitButton);
@@ -48,7 +71,7 @@ describe('RequestInfoForm', () => {
 
   it('should not show validation errors for valid input', async () => {
     const user = userEvent.setup();
-    render(<RequestInfoForm rptoEmail={rptoEmail} rptoName={rptoName} />);
+    renderComponent();
 
     await user.type(screen.getByLabelText(/your name/i), 'John Doe');
     await user.type(screen.getByLabelText(/your email/i), 'john.doe@example.com');
@@ -64,7 +87,7 @@ describe('RequestInfoForm', () => {
 
   it('should generate the correct mailto link on valid submission', async () => {
     const user = userEvent.setup();
-    render(<RequestInfoForm rptoEmail={rptoEmail} rptoName={rptoName} />);
+    renderComponent();
 
     const name = 'Jane Doe';
     const email = 'jane.doe@test.com';

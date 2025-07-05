@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { NextIntlClientProvider } from 'next-intl';
 import { describe, expect, it } from 'vitest';
 
 import { rptos } from '@/data/rptos';
@@ -11,9 +12,20 @@ if (!firstCourse) {
   throw new Error('No courses found in data file for test.');
 }
 
+const mockMessages = {
+  RPTO: {
+    course_duration: 'Duration: ',
+    course_description: 'Comprehensive training for drone piloting.',
+  },
+};
+
 describe('CourseCard', () => {
   it('should render the course name, duration, and description', () => {
-    render(<CourseCard course={firstCourse} />);
+    render(
+      <NextIntlClientProvider messages={mockMessages} locale="en">
+        <CourseCard course={firstCourse} />
+      </NextIntlClientProvider>,
+    );
 
     expect(
       screen.getByRole('heading', { name: firstCourse.name }),
