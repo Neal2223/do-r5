@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-import { DashboardHeader } from '@/features/dashboard/DashboardHeader';
+import HeaderNav from '@/features/testing-ui/fiverr-gig-page/ui/HeaderNav';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
   const t = await getTranslations({
@@ -22,7 +22,7 @@ export default function DashboardLayout(props: { children: React.ReactNode }) {
     <>
       <div className="shadow-md">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between px-3 py-4">
-          <DashboardHeader
+          <HeaderNav
             menu={[
               {
                 href: '/dashboard',

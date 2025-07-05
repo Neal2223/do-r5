@@ -162,5 +162,27 @@
     "message_title": "Message",
     "message_description": "Enter a detailed message for your todo.",
     "submit_button": "Submit"
+  },
+  "RPTO": {
+    "directory_title": "ଆରପିଟିଓ ଡିରେକ୍ଟୋରୀ",
+    "directory_description": "ଓଡିଶାରେ ପ୍ରମାଣିତ ରିମୋଟ ପାଇଲଟ ଟ୍ରେନିଂ ସଂସ୍ଥା ଖୋଜନ୍ତୁ।",
+    "no_rptos_found_title": "କୌଣସି ଆରପିଟିଓ ମିଳିଲା ନାହିଁ",
+    "no_rptos_found_description": "ଆପଣଙ୍କ ସନ୍ଧାନ କିମ୍ବା ଫିଲ୍ଟର ମାନଦଣ୍ଡକୁ ସଜାଡ଼ିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ।",
+    "filter_placeholder_search": "ନାମ ଅନୁଯାୟୀ ଖୋଜନ୍ତୁ...",
+    "filter_all_cities": "ସମସ୍ତ ସହର",
+    "card_logo_alt": "{name} ଲୋଗୋ",
+    "detail_visit_website": "ୱେବସାଇଟ୍ ପରିଦର୍ଶନ କରନ୍ତୁ",
+    "detail_about": "{name} ବିଷୟରେ",
+    "detail_courses_offered": "ପାଠ୍ୟକ୍ରମଗୁଡ଼ିକ",
+    "course_duration": "ଅବଧି: {duration}",
+    "form_request_info_title": "ସୂଚନା ଅନୁରୋଧ କରନ୍ତୁ",
+    "form_your_name_label": "ଆପଣଙ୍କ ନାମ",
+    "form_your_email_label": "ଆପଣଙ୍କ ଇମେଲ୍",
+    "form_message_label": "ବାର୍ତ୍ତା",
+    "form_name_min_length": "ନାମ ଅତିକମରେ ୨ଟି ଅକ୍ଷର ହେବା ଆବଶ୍ୟକ।",
+    "form_email_invalid": "ଏକ ବୈଧ ଇମେଲ୍ ଠିକଣା ପ୍ରବେଶ କରନ୍ତୁ।",
+    "form_message_min_length": "ବାର୍ତ୍ତା ଅତିକମରେ ୧୦ଟି ଅକ୍ଷର ହେବା ଆବଶ୍ୟକ।",
+    "form_send_inquiry_button": "ଅନୁସନ୍ଧାନ ପଠାନ୍ତୁ",
+    "form_inquiry_subject": "{name} ବିଷୟରେ ଅନୁସନ୍ଧାନ"
   }
 }
