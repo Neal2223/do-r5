@@ -41,12 +41,19 @@
         *   Displays validation error messages.
 
 3.  **Integration & Utilities:**
-    *   **`RptoDirectoryPage` (`src/app/[locale]/rpto/page.tsx`):**
-        *   Serves as the main entry point for the RPTO directory.
-        *   Manages filter state and applies filtering logic to the `rptos` data.
-        *   Passes filtered data to `RptoList` and unique cities to `RptoFilter`.
-        *   Uses `useMemo` for performance optimization of filtering and unique city generation.
-    *   **`cn` utility (`src/utils/cn.ts`):** Used consistently across components for merging Tailwind CSS classes.
+    * **`RptoDirectoryPage` (`src/app/[locale]/rpto/page.tsx`):**
+        * Serves as the main entry point for the RPTO directory.
+        * Manages filter state and applies filtering logic to the `rptos` data.
+        * Passes filtered data to `RptoList` and unique cities to `RptoFilter`.
+        * Uses `useMemo` for performance optimization of filtering and unique city generation.
+    * **`cn` utility (`src/utils/cn.ts`):** Used consistently across components for merging Tailwind CSS classes.
+
+4. **Testing & Quality Assurance:**
+    * **Vitest Tests:** Comprehensive unit and integration tests using Vitest (with `@testing-library/react`) have been implemented for all RPTO components (`RptoFilter`, `RptoList`, `RptoCard`, `RptoDetailPage`, `CourseCard`, `RequestInfoForm`), ensuring their correct functionality, edge case handling, and preventing regressions.
+    * **Storybook Stories:** Detailed Storybook stories have been developed for each RPTO component, covering various states, props, and interactions, aiding in isolated development and documentation.
+5. **Internationalization (i18n):**
+    * All user-facing strings within the RPTO Directory components (e.g., "Search by name...", "No RPTOs Found", "Your Name", "Send Inquiry", "About", "Courses Offered") have been moved to locale JSON files (`src/locales/en.json`, `src/locales/or.json`, etc.) and integrated using `useTranslations` or `getTranslations` to support multiple languages, including Odia.
+    * The `RptoDirectoryPage` title and description are also fully internationalized.
 
 ## Avoided Scope (as per initial plan and user instructions)
 
@@ -60,12 +67,7 @@
 
 ## Technical Debt
 
-1.  **Storybook Stories:** While the scaffolding for Storybook is in place, detailed stories for each component (`RptoFilter`, `RptoList`, `RptoCard`, `RptoDetailPage`, `CourseCard`, `RequestInfoForm`) need to be fully developed to cover various states, props, and interactions.
-2.  **Vitest Tests:** Comprehensive unit and integration tests using Vitest (with `@testing-library/react`) are required for all components to ensure their correct functionality, edge case handling, and prevent regressions.
-3.  **Internationalization (i18n):**
-    *   While the `next-intl` setup is present, the user-facing strings within the RPTO Directory components (e.g., "Search by name...", "No RPTOs Found", "Your Name", "Send Inquiry", "About", "Courses Offered") are currently hardcoded in English. These need to be moved to locale JSON files (`src/locales/en.json`, `src/locales/or.json`, etc.) and integrated using `useTranslations` or `getTranslations` to support multiple languages, including Odia.
-    *   The `RptoDirectoryPage` title and description are also hardcoded.
-4.  **Accessibility (beyond Radix UI):** While Radix UI provides a strong foundation for accessibility, a thorough audit of the entire RPTO Directory UI for ARIA attributes, keyboard navigation, and focus management is recommended to ensure full compliance.
-5.  **Performance Optimization:** While `useMemo` is used, further performance profiling (e.g., with React DevTools) could identify areas for optimization, especially with larger datasets or more complex filtering.
-6.  **Error Handling/User Feedback:** Beyond Zod validation errors in the form, there isn't extensive user feedback for other potential issues (e.g., network errors if an API were to be introduced later, or more graceful handling of missing images beyond `object-contain`).
-7.  **Image Optimization:** While `next/image` is used, ensuring proper image sizes, formats (e.g., WebP), and CDN usage for the RPTO logos (if they were to be served from a remote source) would be a future optimization.
+1. **Accessibility (beyond Radix UI):** While Radix UI provides a strong foundation for accessibility, a thorough audit of the entire RPTO Directory UI for ARIA attributes, keyboard navigation, and focus management is recommended to ensure full compliance.
+2. **Performance Optimization:** While `useMemo` is used, further performance profiling (e.g., with React DevTools) could identify areas for optimization, especially with larger datasets or more complex filtering.
+3. **Error Handling/User Feedback:** Beyond Zod validation errors in the form, there isn't extensive user feedback for other potential issues (e.g., network errors if an API were to be introduced later, or more graceful handling of missing images beyond `object-contain`).
+4. **Image Optimization:** While `next/image` is used, ensuring proper image sizes, formats (e.g., WebP), and CDN usage for the RPTO logos (if they were to be served from a remote source) would be a future optimization.

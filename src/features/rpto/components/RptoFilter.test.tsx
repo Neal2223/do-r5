@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 import { NextIntlClientProvider } from 'next-intl';
 import { describe, expect, it, vi } from 'vitest';
+
 import { RptoFilter } from './RptoFilter';
 
 // Mock scrollIntoView as it's not implemented in JSDOM

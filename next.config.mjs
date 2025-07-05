@@ -24,6 +24,9 @@ export default withSentryConfig(
       },
       poweredByHeader: false,
       reactStrictMode: true,
+      images: {
+        domains: ['placehold.co'],
+      },
       experimental: {
         serverComponentsExternalPackages: ['@electric-sql/pglite'],
       },
