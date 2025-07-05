@@ -1,30 +1,39 @@
 import React from 'react';
 
 const jobRolesData = [
-  [
-    { name: 'Full Stack Developer', count: '81.8K+', url: 'https://www.naukri.com/full-stack-developer-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Engineering Manager', count: '1.6K+', url: 'https://www.naukri.com/engineering-manager-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Business Analyst', count: '267.4K+', url: 'https://www.naukri.com/business-analyst-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'UI / UX Designer', count: '1.7K+', url: 'https://www.naukri.com/ui-ux-designer-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Brand Management', count: '580', url: 'https://www.naukri.com/jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=420' },
-    { name: 'Project Manager - Manufacturing', count: '1.1K+', url: 'https://www.naukri.com/jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=494' },
-  ],
-  [
-    { name: 'Mobile / App Developer', count: '3.1K+', url: 'https://www.naukri.com/mobile-application-development-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Technical Lead', count: '11K+', url: 'https://www.naukri.com/technical-lead-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Data Scientist', count: '1.4K+', url: 'https://www.naukri.com/data-scientist-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Branch Manager', count: '366', url: 'https://www.naukri.com/branch-manager-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Key Account Manager', count: '3.7K+', url: 'https://www.naukri.com/jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=555' },
-    { name: 'Construction / Site Supervisor', count: '1.7K+', url: 'https://www.naukri.com/jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=681' },
-  ],
-  [
-    { name: 'DevOps Engineer', count: '3.2K+', url: 'https://www.naukri.com/devops-engineer-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Automation Test Engineer', count: '3.2K+', url: 'https://www.naukri.com/automation-test-engineer-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Product Manager', count: '1.3K+', url: 'https://www.naukri.com/product-manager-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Functional Consultant', count: '4.9K+', url: 'https://www.naukri.com/functional-consultant-jobs?src=popular_roles_pwa_homepage_srch' },
-    { name: 'Public Relations', count: '1.1K+', url: 'https://www.naukri.com/jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=401' },
-    { name: 'Research Associate / Engineer', count: '542', url: 'https://www.naukri.com/jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=1171' },
-  ],
+  {
+    id: 'it-roles',
+    roles: [
+      { name: 'Full Stack Developer', count: '81.8K+', url: '#full-stack-developer-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Engineering Manager', count: '1.6K+', url: '#engineering-manager-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Business Analyst', count: '267.4K+', url: '#business-analyst-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'UI / UX Designer', count: '1.7K+', url: '#ui-ux-designer-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Brand Management', count: '580', url: '#jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=420' },
+      { name: 'Project Manager - Manufacturing', count: '1.1K+', url: '#jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=494' },
+    ],
+  },
+  {
+    id: 'tech-and-management-roles',
+    roles: [
+      { name: 'Mobile / App Developer', count: '3.1K+', url: '#mobile-application-development-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Technical Lead', count: '11K+', url: '#technical-lead-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Data Scientist', count: '1.4K+', url: '#data-scientist-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Branch Manager', count: '366', url: '#branch-manager-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Key Account Manager', count: '3.7K+', url: '#jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=555' },
+      { name: 'Construction / Site Supervisor', count: '1.7K+', url: '#jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=681' },
+    ],
+  },
+  {
+    id: 'specialized-roles',
+    roles: [
+      { name: 'DevOps Engineer', count: '3.2K+', url: '#devops-engineer-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Automation Test Engineer', count: '3.2K+', url: '#automation-test-engineer-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Product Manager', count: '1.3K+', url: '#product-manager-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Functional Consultant', count: '4.9K+', url: '#functional-consultant-jobs?src=popular_roles_pwa_homepage_srch' },
+      { name: 'Public Relations', count: '1.1K+', url: '#jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=401' },
+      { name: 'Research Associate / Engineer', count: '542', url: '#jobs-in-india?src=popular_roles_pwa_homepage_srch&roleTypeGid=1171' },
+    ],
+  },
 ];
 
 const JobsByRole = () => {
@@ -36,9 +45,9 @@ const JobsByRole = () => {
       <div className="-mx-4 flex space-x-0 overflow-x-auto px-4 pb-4">
         <div className="flex shrink-0 flex-col space-y-3 sm:space-y-4">
           { }
-          {jobRolesData.map((row, rowIndex) => (
-            <div key={`job-row-${rowIndex}`} className="flex space-x-2 sm:space-x-3">
-              {row.map(role => (
+          {jobRolesData.map(row => (
+            <div key={row.id} className="flex space-x-2 sm:space-x-3">
+              {row.roles.map(role => (
                 <a
                   key={role.url}
                   href={role.url}

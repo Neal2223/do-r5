@@ -107,14 +107,14 @@ export const ReviewsSection = () => {
         </CardContent>
       </Card>
 
-      {reviews.map((review, i) => (
-        <Card key={i}>
+      {reviews.map(review => (
+        <Card key={`${review.user}-${review.reviewTitle}`}>
           <CardHeader className="flex flex-row items-start justify-between">
             <div className="flex space-x-4">
               <Avatar className="size-12">
                 <AvatarFallback>
                   {review.user.charAt(0)}
-                  {review.user.split(' ')[1].charAt(0)}
+                  {review.user.split(' ').length > 1 ? review.user.split(' ')[1]?.charAt(0) : ''}
                 </AvatarFallback>
               </Avatar>
               <div>
@@ -128,7 +128,7 @@ export const ReviewsSection = () => {
           <CardContent className="space-y-4">
             <h3 className="text-xl font-bold">{review.reviewTitle}</h3>
             <div className="flex items-center space-x-1 text-yellow-500">
-              {[...Array(5)].map((_, j) => <Star key={j} fill={j < Math.floor(review.rating) ? 'currentColor' : 'none'} stroke="currentColor" className="size-5" />)}
+              {[...Array(5)].map((_, j) => <Star key={`review-star-${j}`} fill={j < Math.floor(review.rating) ? 'currentColor' : 'none'} stroke="currentColor" className="size-5" />)}
               <span className="font-bold text-foreground">
                 {review.rating}
                 /5

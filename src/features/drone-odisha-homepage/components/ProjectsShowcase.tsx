@@ -16,7 +16,7 @@ const ProjectsShowcase = () => {
       <div className="columns-2 gap-4 space-y-4 md:columns-3 lg:columns-4">
         {images.map((src, i) => (
           // Using array index as key is acceptable here since the order of images is static and won't change.
-          <Image key={i} src={src} width={400} height={300} className="w-full rounded-lg shadow-md" alt={`Drone Project ${i + 1}`} />
+          <Image key={src} src={src} width={400} height={300} className="w-full rounded-lg shadow-md" alt={`Drone Project ${i + 1}`} />
         ))}
       </div>
     </div>

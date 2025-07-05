@@ -65,7 +65,7 @@ export const rptos: Rpto[] = (() => {
   ];
 
   const mockRptos: Rpto[] = [];
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 5; i++) {
     const city = cities[i % cities.length] as string;
     const rptoName = `Drone Academy ${i + 1}`;
     const rptoId = `rpto-${city.toLowerCase().replace(/ /g, '-')}-${i + 1}`;

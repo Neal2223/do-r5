@@ -12,12 +12,27 @@
     "community": "Community",
     "company": "Company"
   },
-  "Hero": {
-    "follow_twitter": "Follow @Ixartz on Twitter",
-    "title": "The perfect <important>SaaS template</important> to build and scale your business with ease.",
-    "description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS.",
-    "primary_button": "Get Started",
-    "secondary_button": "Star on GitHub"
+  "HomeServicesHero": {
+    "main_heading": "Drone Power. Odisha’s Future.",
+    "sub_heading": "What drone mission will you launch today?",
+    "womens_salon": "Aerial Photography: Capture Odisha from Above",
+    "mens_salon": "Drone Surveying: Map, Measure, Master",
+    "appliance_repair": "Drone Repairs: Restore Flight, Renew Potential",
+    "cleaning": "Agri-Drone Spraying: Nourish, Protect, Thrive",
+    "tradesmen": "Drone Pilots & Engineers: Odisha’s Sky Architects",
+    "service_rating": "Drone Service Excellence*",
+    "customer_stat": "Missions Flown Across Odisha*"
+  },
+  "HeroSection": {
+    "title": "Soar Above. Lead the Future.",
+    "subtitle": "Unleash the power of drones. Shape the skies of tomorrow, today.",
+    "search_placeholder": "What drone solution are you looking for?",
+    "primary_button": "Start Your Journey",
+    "form_label": "Search for drone services, training, or regulations",
+    "form_aria_label": "Drone Odisha hero search form",
+    "form_submit_aria_label": "Submit your search query",
+    "success_message": "Success! Your search is taking flight.",
+    "error_message": "Please enter a search query to begin your journey."
   },
   "Sponsors": {
     "title": "Sponsored by"
@@ -162,6 +177,11 @@
     "message_title": "Message",
     "message_description": "Enter a detailed message for your todo.",
     "submit_button": "Submit"
+  },
+  "DroneOdishaHomepage": {
+    "title": "Welcome to Drone Odisha",
+    "meta_title": "Drone Odisha - Official Website",
+    "meta_description": "Explore the official website of Drone Odisha. Learn about drone regulations, training, and services in Odisha."
   },
   "RPTO": {
     "directory_title": "RPTO Directory",

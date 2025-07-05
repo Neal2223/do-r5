@@ -16,9 +16,9 @@ const RecommendedForYou = () => {
       <h3 className="text-2xl font-bold">Recommended for you</h3>
       <div className="relative">
         <div className="flex space-x-4 overflow-x-auto pb-4">
-          {recommendations.map((rec, i) => (
+          {recommendations.map(rec => (
 
-            <Card key={i} className="min-w-[300px]">
+            <Card key={rec.title} className="min-w-[300px]">
               <CardContent className="p-0">
                 <Image src={rec.img} alt={rec.title} width={300} height={200} className="rounded-t-lg" />
                 <div className="space-y-2 p-4">

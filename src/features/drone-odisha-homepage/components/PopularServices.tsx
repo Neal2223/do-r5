@@ -7,31 +7,48 @@ import { Card, CardContent } from '@/components/ui/card';
 import OptimizedCarousel from '@/components/ui/OptimizedCarousel';
 
 const PopularServices = () => {
+  const imagePaths = [
+    '/popular services/UI Banner Dark Art Style.jpeg',
+    '/popular services/freepik__a-graphic-vector-art-style-ui-banner-with-a-dark-h__16203.png',
+    '/popular services/freepik__a-graphic-vector-art-style-ui-banner-with-a-dark-h__16204.png',
+    '/popular services/freepik__a-graphic-vector-art-style-ui-banner-with-a-dark-h__16205.png',
+    '/popular services/freepik__a-graphic-vector-art-style-ui-banner-with-a-dark-h__16206.png',
+  ];
+
+  const getRandomImage = (): string => {
+    if (imagePaths.length === 0) {
+      // Fallback or error handling if no images are available
+      return '/placeholder.png'; // Or throw an error
+    }
+    const randomIndex = Math.floor(Math.random() * imagePaths.length);
+    return imagePaths[randomIndex]!;
+  };
+
   const popularServices = [
     {
       title: 'Agri Spray',
-      img: 'https://placehold.co/400x300/a78bfa/ffffff?text=Coding',
+      img: getRandomImage(),
     },
     {
       title: 'Mapping',
-      img: 'https://placehold.co/400x300/60a5fa/ffffff?text=Web+Dev',
+      img: getRandomImage(),
     },
     {
       title: 'Inspection',
-      img: 'https://placehold.co/400x300/f87171/ffffff?text=Editing',
+      img: getRandomImage(),
     },
     {
       title: 'Delivery',
-      img: 'https://placehold.co/400x300/facc15/ffffff?text=Software',
+      img: getRandomImage(),
     },
-    { title: 'Monitoring', img: 'https://placehold.co/400x300/4ade80/ffffff?text=SEO' },
+    { title: 'Monitoring', img: getRandomImage() },
     {
       title: 'Survey',
-      img: 'https://placehold.co/400x300/fb923c/ffffff?text=Design',
+      img: getRandomImage(),
     },
     {
       title: 'Filmmaking',
-      img: 'https://placehold.co/400x300/2dd4bf/ffffff?text=Books',
+      img: getRandomImage(),
     },
   ];
 
@@ -43,13 +60,13 @@ const PopularServices = () => {
         getKey={service => service.title}
         renderItem={service => (
           <Card className="overflow-hidden">
-            <CardContent className="p-0">
+            <CardContent className="relative h-40 p-0">
               <Image
                 src={service.img}
                 alt={service.title}
-                className="h-40 w-full object-cover"
-                width={400}
-                height={300}
+                className="object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <div className="p-4">
                 <h3 className="text-lg font-bold">{service.title}</h3>

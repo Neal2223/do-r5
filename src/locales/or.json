@@ -12,12 +12,27 @@
     "community": "ସମୁଦାୟ",
     "company": "କମ୍ପାନୀ"
   },
-  "Hero": {
-    "follow_twitter": "Follow @Ixartz on Twitter",
-    "title": "The perfect <important>SaaS template</important> to build and scale your business with ease.",
-    "description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS.",
-    "primary_button": "Get Started",
-    "secondary_button": "Star on GitHub"
+  "HomeServicesHero": {
+    "main_heading": "ଡ୍ରୋନ୍ ଶକ୍ତି। ଓଡ଼ିଶାର ଭବିଷ୍ୟତ।",
+    "sub_heading": "ଆଜି ଆପଣ କେଉଁ ଡ୍ରୋନ୍ ମିଶନ୍ ଆରମ୍ଭ କରିବେ?",
+    "womens_salon": "ଏରିଏଲ୍ ଫଟୋଗ୍ରାଫି: ଓଡ଼ିଶାକୁ ଉପରୁ ଧରନ୍ତୁ",
+    "mens_salon": "ଡ୍ରୋନ୍ ସର୍ଭେ: ମାପନ୍ତୁ, ମାପନ୍ତୁ, ଅଧିକ ଜାଣନ୍ତୁ",
+    "appliance_repair": "ଡ୍ରୋନ୍ ମରାମତି: ଉଡ଼ାଣ ପୁନଃସ୍ଥାପନ, ସମ୍ଭାବନା ପୁନଃନବୀକରଣ",
+    "cleaning": "କୃଷି ଡ୍ରୋନ୍ ଛିଟା: ପୋଷଣ, ସୁରକ୍ଷା, ଉନ୍ନତି",
+    "tradesmen": "ଡ୍ରୋନ୍ ପାଇଲଟ୍ ଏବଂ ଇଞ୍ଜିନିୟର୍: ଓଡ଼ିଶାର ଆକାଶ ଶିଳ୍ପୀମାନେ",
+    "service_rating": "ଡ୍ରୋନ୍ ସେବା ଉତ୍କୃଷ୍ଟତା*",
+    "customer_stat": "ଓଡ଼ିଶାରେ ଉଡ଼ିଥିବା ମିଶନ୍*"
+  },
+  "HeroSection": {
+    "title": "ଉଡ଼ନ୍ତୁ ଉପରକୁ। ଭବିଷ୍ୟତକୁ ନେତୃତ୍ୱ ଦିଅନ୍ତୁ।",
+    "subtitle": "ଡ୍ରୋନ୍ ଶକ୍ତିକୁ ମୁକ୍ତ କରନ୍ତୁ। ଆଜିରେ ଆସନ୍ତାକୁ ଗଢ଼ନ୍ତୁ।",
+    "search_placeholder": "କେଉଁ ଡ୍ରୋନ୍ ସମାଧାନ ଖୋଜୁଛନ୍ତି?",
+    "primary_button": "ଆପଣଙ୍କ ଯାତ୍ରା ଆରମ୍ଭ କରନ୍ତୁ",
+    "form_label": "ଡ୍ରୋନ୍ ସେବା, ତାଲିମ କିମ୍ବା ନିୟମାବଳୀ ଖୋଜନ୍ତୁ",
+    "form_aria_label": "ଡ୍ରୋନ୍ ଓଡିଶା ହିରୋ ସନ୍ଧାନ ଫର୍ମ",
+    "form_submit_aria_label": "ଆପଣଙ୍କ ସନ୍ଧାନ ପ୍ରସ୍ତୁତ କରନ୍ତୁ",
+    "success_message": "ସଫଳତା! ଆପଣଙ୍କ ସନ୍ଧାନ ଏବେ ଉଡ଼ିବ।",
+    "error_message": "ଦୟାକରି ଆରମ୍ଭ କରିବାକୁ ଏକ ସନ୍ଧାନ ଦିଅନ୍ତୁ।"
   },
   "Sponsors": {
     "title": "Sponsored by"
@@ -163,6 +178,11 @@
     "message_description": "Enter a detailed message for your todo.",
     "submit_button": "Submit"
   },
+  "DroneOdishaHomepage": {
+    "title": "ଡ୍ରୋନ୍ ଓଡିଶାକୁ ସ୍ୱାଗତ",
+    "meta_title": "ଡ୍ରୋନ୍ ଓଡିଶା - ଅଫିସିଆଲ୍ ୱେବସାଇଟ୍",
+    "meta_description": "ଡ୍ରୋନ୍ ଓଡିଶାର ଅଫିସିଆଲ୍ ୱେବସାଇଟ୍ ଅନୁସନ୍ଧାନ କରନ୍ତୁ। ଓଡିଶାରେ ଡ୍ରୋନ୍ ନିୟମାବଳୀ, ତାଲିମ ଏବଂ ସେବା ବିଷୟରେ ଜାଣନ୍ତୁ।"
+  },
   "RPTO": {
     "directory_title": "ଆରପିଟିଓ ଡିରେକ୍ଟୋରୀ",
     "directory_description": "ଓଡିଶାରେ ପ୍ରମାଣିତ ରିମୋଟ ପାଇଲଟ ଟ୍ରେନିଂ ସଂସ୍ଥା ଖୋଜନ୍ତୁ।",
@@ -172,7 +192,7 @@
     "filter_all_cities": "ସମସ୍ତ ସହର",
     "card_logo_alt": "{name} ଲୋଗୋ",
     "detail_visit_website": "ୱେବସାଇଟ୍ ପରିଦର୍ଶନ କରନ୍ତୁ",
-    "detail_about": "{name} ବିଷୟରେ",
+    "detail_about": "{rptoName} ବିଷୟରେ",
     "detail_courses_offered": "ପାଠ୍ୟକ୍ରମଗୁଡ଼ିକ",
     "course_duration": "ଅବଧି: {duration}",
     "form_request_info_title": "ସୂଚନା ଅନୁରୋଧ କରନ୍ତୁ",

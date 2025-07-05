@@ -67,7 +67,7 @@ const Reviews = () => {
           reviews for this Gig
         </h3>
         <div className="flex items-center space-x-1 text-yellow-500">
-          {[...Array(5)].map((_, i) => <Star key={i} fill={i < Math.round(reviewData.average) ? 'currentColor' : 'none'} stroke="currentColor" className="size-5" />)}
+          {[...Array(5)].map((_, i) => <Star key={`overall-star-${i}`} fill={i < Math.round(reviewData.average) ? 'currentColor' : 'none'} stroke="currentColor" className="size-5" />)}
           <span className="font-bold text-foreground">{reviewData.average}</span>
         </div>
       </div>
@@ -105,8 +105,8 @@ const Reviews = () => {
         </div>
       </div>
       <Separator />
-      {individualReviews.map((review, i) => (
-        <Card key={i} className="border-none shadow-none">
+      {individualReviews.map(review => (
+        <Card key={`${review.user}-${review.date}`} className="border-none shadow-none">
           <CardContent className="space-y-4 p-0">
             <div className="flex items-center space-x-3">
               <Avatar><AvatarFallback>{review.user.charAt(0).toUpperCase()}</AvatarFallback></Avatar>
@@ -117,7 +117,7 @@ const Reviews = () => {
             </div>
             <div className="flex items-center space-x-2">
               <div className="flex items-center space-x-0.5 text-yellow-500">
-                {[...Array(5)].map((_, j) => <Star key={j} fill={j < review.rating ? 'currentColor' : 'none'} stroke="currentColor" className="size-4" />)}
+                {[...Array(5)].map((_, j) => <Star key={`review-star-${j}`} fill={j < review.rating ? 'currentColor' : 'none'} stroke="currentColor" className="size-4" />)}
               </div>
               <span className="font-bold text-yellow-500">{review.rating}</span>
               <Separator orientation="vertical" className="h-4" />

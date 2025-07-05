@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 
 import { rptos } from '@/data/rptos';
 import { CourseCard } from '@/features/rpto/components/CourseCard';
@@ -14,10 +15,12 @@ export function generateStaticParams() {
 }
 
 type RptoDetailPageProps = {
-  params: { id: string };
+  params: { id: string; locale: string };
 };
 
 export default function RptoDetailPage({ params }: RptoDetailPageProps) {
+  const locale = params.locale;
+  setRequestLocale(locale);
   const rpto = rptos.find(r => r.id === params.id);
   const t = useTranslations('RPTO');
 

@@ -9,7 +9,7 @@ import { dronePackages } from '../data/packages';
 
 const PackageSidebar = () => (
   <div className="sticky top-10">
-    <Tabs defaultValue={dronePackages[0].id} className="w-full rounded-md border">
+    <Tabs defaultValue={dronePackages[0]!.id} className="w-full rounded-md border">
       <TabsList className="grid w-full grid-cols-3">
         {dronePackages.map(pkg => (
           <TabsTrigger key={pkg.id} value={pkg.id}>
