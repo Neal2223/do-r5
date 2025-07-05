@@ -54,6 +54,8 @@
     ]
   },
   "exclude": [
+    "**/*.stories.tsx",
+    "**/*.stories.ts",
     "./out/**/*",
     "./node_modules/**/*",
     "**/*.spec.ts",

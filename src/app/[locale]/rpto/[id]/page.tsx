@@ -60,7 +60,7 @@ export default function RptoDetailPage({ params }: RptoDetailPageProps) {
           <div className="space-y-6">
             <div>
               <h2 className="text-xl font-semibold">
-                {t('detail_about', { rptoName: rpto.name })}
+                {t('detail_about', { name: rpto.name })}
               </h2>
               <p className="mt-2 text-muted-foreground">{rpto.description}</p>
             </div>

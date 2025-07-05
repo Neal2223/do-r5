@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 
-
 type PageLayoutProps = {
   header: React.ReactNode;
   footer: React.ReactNode;
@@ -25,7 +24,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({ header, footer, children }) => 
       {header}
       <main className={getLayoutClasses()}>{children}</main>
       {footer}
-
 
     </div>
   );

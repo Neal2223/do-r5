@@ -182,5 +182,27 @@
     "message_title": "Message",
     "message_description": "Entrez un message détaillé pour votre todo.",
     "submit_button": "Envoyer"
+  },
+  "RPTO": {
+    "directory_title": "Annuaire RPTO",
+    "directory_description": "Trouvez des organismes de formation de pilotes à distance certifiés en Odisha.",
+    "no_rptos_found_title": "Aucun RPTO trouvé",
+    "no_rptos_found_description": "Essayez d'ajuster vos critères de recherche ou de filtrage.",
+    "filter_placeholder_search": "Rechercher par nom...",
+    "filter_all_cities": "Toutes les villes",
+    "card_logo_alt": "Logo de {name}",
+    "detail_visit_website": "Visiter le site web",
+    "detail_about": "À propos de {name}",
+    "detail_courses_offered": "Cours proposés",
+    "course_duration": "Durée : {duration}",
+    "form_request_info_title": "Demander des informations",
+    "form_your_name_label": "Votre nom",
+    "form_your_email_label": "Votre e-mail",
+    "form_message_label": "Message",
+    "form_name_min_length": "Le nom doit comporter au moins 2 caractères.",
+    "form_email_invalid": "Veuillez saisir une adresse e-mail valide.",
+    "form_message_min_length": "Le message doit comporter au moins 10 caractères.",
+    "form_send_inquiry_button": "Envoyer la demande",
+    "form_inquiry_subject": "Demande concernant {name}"
   }
 }
