@@ -28,12 +28,6 @@
     "typecheck": "tsc --noEmit",
     "validate": "npm-run-all --parallel lint typecheck"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "pnpm run validate"
-    ]
-  },
   "dependencies": {
     "@clerk/localizations": "^3.14.2",
     "@clerk/nextjs": "^6.18.3",
@@ -146,6 +140,12 @@
     "vite-tsconfig-paths": "^5.0.1",
     "vitest": "^2.1.9",
     "vitest-fail-on-console": "^0.7.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "pnpm run validate"
+    ]
   },
   "config": {
     "commitizen": {
